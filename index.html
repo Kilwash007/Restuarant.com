@@ -3,28 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <!--Custome CSS-->
     <link rel="stylesheet" href="style.css" />
     <title>Kowili Restaurant</title>
   </head>
   <body>
-    <nav>
-      <h1>Kowili Restaurant</h1>
+    <!--Navbar Section-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div>
-        <ul>
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#Menu">Menu</a></li>
-          <li><a href="#About Us">About Us</a></li>
-          <li><a href="#Contact">Contact</a></li>
-        </ul>
+        <a class="navbar-brand" href="#">Kowili Restaurant</a>
+        <!--Nav Toggler Button especially for Mobile menu-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div>
+          <ul>
+            <li class="nav-item"><a href="#Home">Home</a></li>
+            <li class="nav-item"><a href="#Menu">Menu</a></li>
+            <li class="nav-item"><a href="#About Us">About Us</a></li>
+            <li class="nav-item"><a href="#Contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <section>
-      <img src="/Images/Fish Image.png" alt="" />
-      <h2>Hero Center</h2>
+    <!--Hero Section-->
+    <section
+      class="hero-section d-flex flex-column align-items-center justify-content-center text-center bg-light py-5"
+    >
+      <img
+        src="/Images/Fish Image.png"
+        class="img-fluid round shadow-lg mb-3"
+        alt="Delicious Fish Dish"
+      />
+      <h2 class="fw-bold text-primary">Hero Center</h2>
     </section>
+    <!--Menu Section-->
     <section>
-      <div class="Menu container my -5">
-        <div class="Menu-Item">
+      <div class="Menu container my-5">
+        <div class="row">
+          <div class="col-md-4 text-center">
           <img
             src="/Images/Fish fillets.png"
             class="card-img-top img-fluid rounde"
@@ -32,18 +59,18 @@
             width="200px"
             height="150px"
           />
-          <div>Fish Fillets</div>
-          <div class="Menu Description">
+          <h3>Fish Fillets</h3>
+          <p>
             A perfectly grilled fish fillet with a golden-brown crust, served
             over a bed of thinly sliced lemon for a zesty touch. Accompanied by
             a fresh garden salad made of cherry tomatoes, crisp lettuce, sliced
             onions, and finely chopped green onions. Lightly seasoned with herbs
             and black pepper for a balanced, flavorful experience. A healthy and
             delicious choice!
-          </div>
-          <div class="Menu Price">$13.89</div>
+          </p>
+          <p class="fw-bold">$13.89</p>
         </div>
-        <div class="Menu-Item">
+        <div class="col-md-4 text-center">
           <img
             src="/Images/Tilapia Florentine.png"
             class="card-img-top img-fluid rounde"
@@ -51,8 +78,8 @@
             width="200px"
             height="150px"
           />
-          <div class="Menu Title">Tilapia Florentine</div>
-          <div class="Menu Description">
+          <h3>Tilapia Florentine</h3>
+          <p>
             Delicate tilapia fillet, pan-seared to perfection and served over a
             bed of creamy spinach Florentine sauce. The rich and velvety sauce,
             made with sautéed spinach, garlic, butter, and a touch of cream,
@@ -60,10 +87,10 @@
             lemon zest and freshly ground black pepper for a refreshing balance.
             Served with your choice of steamed vegetables, mashed potatoes, or a
             light salad.
-          </div>
-          <div class="Menu Price">$11.50</div>
+          </p>
+          <p class="fw-bold">$11.50</p>
         </div>
-        <div class="Menu-Item">
+        <div class="col-md-4 text-center">
           <img
             src="/Images/Orange Soy Glazed Salmon with Rice.png"
             class="card-img-top img-fluid rounde"
@@ -71,82 +98,106 @@
             width="200px"
             height="150px"
           />
-          <div class="Menu Title">Orange Soy Salmon with Rice</div>
-          <div class="Menu Description">
+          <h3>Orange Soy Salmon with Rice</h3>
+          <p>
             Succulent salmon fillet, pan-seared to a perfect crisp and glazed
             with a rich, tangy orange-soy sauce. The glaze, made from fresh
             orange juice, soy sauce, honey, and a hint of ginger, creates a
             perfect balance of sweet and savory flavors. Served over a bed of
             fluffy jasmine rice, absorbing the delicious sauce, and accompanied
             by steamed seasonal vegetables for a vibrant and wholesome meal.
-          </div>
-          <div class="Menu Price">$12.11</div>
+          </p>
+          <p class="fw-bold">$12.11</p>
         </div>
       </div>
     </section>
-    <section class="About Us">
+    <!--About Section-->
+    <section class="About Us py-5 bg-light">
       <div class="About Content">
-        <h2>About Our Restaurant</h2>
-        <p>
-          Welcome to Kowili Restaurant, where we serve the finest Fish cuisine
-          with fresh ingredients and accompaniments
-        </p>
-      </div>
-      <div class="About Image">
-        <img
-          src="/Images/Restaurant Image.png"
-          alt=""
-          width="300px"
-          height="200pax"
-        />
-      </div>
-    </section>
-    <section class="contact">
-      <div class="contact">
-        <h2>Contact Us</h2>
-        <form action="#" method="post">
-          <div class="input-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
+        <div class="row align-items-center">
+          <!--Text Content-->
+          <div class="col-md-6">
+            <h2 class="fw-bold">About Our Restaurant</h2>
+            <p class="text-muted">
+              Welcome to Kowili Restaurant, where we serve the finest Fish
+              cuisine with fresh ingredients and accompaniments
+            </p>
           </div>
-          <div class="input-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
+          <!--Image-->
+          <div class="col-md-6 text-center">
+            <img
+              src="/Images/Restaurant Image.png"
+              class="img-fluid round shadow"
+              alt="Restaurant Image"
+              width="300px"
+              height="200pax"
+            />
           </div>
-          <div class="input-group">
-            <label for="Message">Message</label>
-            <input type="Message" id="Message" name="Message" required />
-          </div>
-          <button type="Submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="footer">
-        <p>&copy; 2025 Kowili Restaurant. All Rights Reserved</p>
-        <div>
-          <a href="#" target="_blank"
-            ><img
-              src="/Logos/LinkedIn.svg"
-              alt="LinkedIn"
-              width="20px"
-              height="20px"
-          /></a>
-          <a href="#" target="_blank"
-            ><img
-              src="/Logos/Twitterlogo.svg"
-              alt="Twitter"
-              width="20px"
-              height="20px"
-          /></a>
-          <a href="#" target="_blank"
-            ><img
-              src="/Logos/Instalogo.svg"
-              alt="Instagram"
-              width="20px"
-              height="20px"
-          /></a>
         </div>
+      </div>
+    </section>
+    <!--Contact Section-->
+    <section class="contact my-5">
+      <h2 class="text-center">Contact Us</h2>
+      <form class="mx-auto w-50">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="Message" class="form-label">Message</label>
+          <input
+            type="Message"
+            class="form-control"
+            id="Message"
+            name="Message"
+            required
+          />
+        </div>
+        <button type="Submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
+    <!--Footer Section-->
+    <footer class="footer bg-dark text-white text-center py-3">
+      <p>&copy; 2025 Kowili Restaurant. All Rights Reserved</p>
+      <div>
+        <a href="#" target="_blank"
+          ><img
+            src="/Logos/LinkedIn.svg"
+            alt="LinkedIn"
+            width="20px"
+            height="20px"
+        /></a>
+        <a href="#" target="_blank"
+          ><img
+            src="/Logos/Twitterlogo.svg"
+            alt="Twitter"
+            width="20px"
+            height="20px"
+        /></a>
+        <a href="#" target="_blank"
+          ><img
+            src="/Logos/Instalogo.svg"
+            alt="Instagram"
+            width="20px"
+            height="20px"
+        /></a>
       </div>
     </footer>
   </body>
